@@ -90,15 +90,30 @@ function App() {
     }
   };
 
-  // download QR
+  // download QR (รองรับทุกเบราว์เซอร์)
   const downloadQr = () => {
     if (!qrDataUrl) return;
+
+    const byteString = atob(qrDataUrl.split(',')[1]);
+    const mimeString = qrDataUrl.split(',')[0].split(':')[1].split(';')[0];
+
+    const ab = new ArrayBuffer(byteString.length);
+    const ia = new Uint8Array(ab);
+    for (let i = 0; i < byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+
+    const blob = new Blob([ab], { type: mimeString });
+    const blobUrl = URL.createObjectURL(blob);
+
     const link = document.createElement("a");
-    link.href = qrDataUrl;
+    link.href = blobUrl;
     link.download = "qr.png";
     document.body.appendChild(link);
     link.click();
     link.remove();
+
+    URL.revokeObjectURL(blobUrl);
   };
 
   return (
