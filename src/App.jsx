@@ -25,7 +25,7 @@ function App() {
 
   const fileInputRef = useRef(null);
 
-  const BACKEND_URL = "https://qr-code-server.onrender.com";
+  const BACKEND_URL = "https://qr-generator-server-l7or.onrender.com";
 
   // validate URL
   const isValidUrl = (v) => {
