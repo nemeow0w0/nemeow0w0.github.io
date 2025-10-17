@@ -180,12 +180,16 @@ function App() {
       });
     }
 
+    const now = new Date();
+  const pad = (n) => n.toString().padStart(2, "0");
+  const filename = `qr-${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}_${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}.png`;
+
     canvas.toBlob((blob) => {
     if (!blob) return;
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "qr.png";
+    link.download = filename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
