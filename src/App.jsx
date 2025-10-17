@@ -180,10 +180,17 @@ function App() {
       });
     }
 
+    canvas.toBlob((blob) => {
+    if (!blob) return;
+    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.href = canvas.toDataURL("image/png");
+    link.href = url;
     link.download = "qr.png";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }, "image/png");
   };
 
   return (
