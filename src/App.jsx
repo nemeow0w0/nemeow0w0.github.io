@@ -326,8 +326,15 @@ function App() {
               </label>
 
               {logoFile && (
-                <span className="text-sm text-gray-700">
-                  ไฟล์โลโก้ที่เลือก: {logoFile.name}
+                <span className="text-sm text-gray-700 max-w-[200px] truncate inline-block align-middle">
+                  ไฟล์โลโก้ที่เลือก: {''}
+                  <span title={logoFile.name}>
+                  {logoFile.name.length > 20
+                    ? logoFile.name.slice(0,10) + "..." + logoFile.name.slice(-7)
+                    : logoFile.name
+                  
+                  }
+                  </span>
                 </span>
               )}
             </div>
