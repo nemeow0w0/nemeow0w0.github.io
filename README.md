@@ -1,16 +1,36 @@
-# React + Vite
+**Qr code Generator**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ที่มา 
+เป็นโปรเจคแรกที่ได้ทำตอนฝึกงาน พี่เลี้ยงให้ทำเพื่อดูความเข้าใจในการทำเว็บไซต์และการใช้งาน libary QRCODE โดยปัญหาคือ เว็บไซต์ **Qr code Generator** โดยทั้วไปมักมีโฆษนา ต้องการที่ไม่มีโฆษณาจึงได้ให้ลองทำ**Qr code Generator** ขึ้นมา
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**วัตถุประสงค์**
+ - ฝึกการเขียนเว็บไซต์
+ - ฝึกการเขียนโปรแกรม
+ - ฝึกการใช้งาน Libary QR Code 
+ - ทำความเข้าใจการเผยแพร่เว็บไซต์ ด้วย gitgubpage 
 
-## React Compiler
+---
+**เทคโนโลยีที่ใช้**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+  - React.js (Vite)
+  - JavaScript
+  - CSS / Tailwind CSS (พื้นฐาน)
 
-## Expanding the ESLint configuration
+### Tools
+  - github
+ 
+---
+**ฟีเจอ**
+- เพิ่ม / เปลี่ยนโลโก้ ตรงกลาง QR Code ได้
+- รับรองรูบแบบข้อมูลหลายประเภท (ข้อความ Url เบอร์มือถือ)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+ **สิ่งที่ได้เรียนรู้**
+ - การใช้งาน libary QR Code
+ - ทำความเข้าใจการใช้งาน state ใน React
+ - การ Deploy บน Github Page
+
+
